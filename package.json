@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "boxicons": "^2.1.4"
+  },
+  "devDependencies": {
+    "grunt-contrib-sass": "^2.0.0"
+  }
+}
