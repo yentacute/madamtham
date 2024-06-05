@@ -6,4 +6,12 @@
     padding-top: 4rem;
     row-gap: 3.5rem;
   }
+  &__title,
+  &__value-number {
+    color: #fff;
+  }
+  &__title {
+    font-size: var(--biggest-font-size);
+    line-height: 120%;
+  }
 }
