@@ -167,4 +167,48 @@ ul {
 .home__title {
   font-size: var(--biggest-font-size);
   line-height: 120%;
+}
+
+.t-scroll {
+  --t-height: 80px;
+  --t-gap: 3rem;
+}
+.t-scroll__wrapper {
+  margin-top: 5rem;
+  overflow: hidden;
+  height: var(--t-height);
+  display: flex;
+  align-items: center;
+  gap: var(--t-gap);
+  border: 1px solid #ddd;
+}
+.t-scroll__inner {
+  display: flex;
+  flex-shrink: 0;
+  min-width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--t-gap);
+  animation-name: scrollLeft;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.t-scroll__item {
+  width: -moz-max-content;
+  width: max-content;
+  display: flex;
+  gap: 0.8rem;
+}
+.t-scroll__item span {
+  font-size: 4.2rem;
+}
+.t-scroll__item i {
+  font-size: 4.8rem;
+}
+
+@keyframes scrollLeft {
+  to {
+    transform: translateX(calc(-100% - var(--t-gap)));
+  }
 }/*# sourceMappingURL=styles.css.map */

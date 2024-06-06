@@ -1,0 +1,45 @@
+.t-scroll {
+  --t-height: 80px;
+  --t-gap: 3rem;
+  &__wrapper {
+    margin-top: 5rem;
+    overflow: hidden;
+    height: var(--t-height);
+    display: flex;
+    align-items: center;
+    gap: var(--t-gap);
+    border: 1px solid #ddd;
+    
+  }
+  &__inner {
+    display: flex;
+    flex-shrink: 0;
+    min-width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--t-gap);
+    animation-name: scrollLeft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  &__item {
+    width: max-content;
+    display: flex;
+    gap: .8rem;
+    span {
+      font-size: 4.2rem;
+    }
+    i {
+      font-size: 4.8rem;
+    }
+  }
+
+
+
+}
+@keyframes scrollLeft {
+  to {
+    transform: translateX(calc(-100% - var(--t-gap)));
+  }
+}
