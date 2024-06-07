@@ -1,45 +1,42 @@
 .t-scroll {
-  --t-height: 80px;
-  --t-gap: 3rem;
+  --t-scroll-height: 10rem;
+  --t-scroll-item-gap: 3rem;
   &__wrapper {
-    margin-top: 5rem;
-    overflow: hidden;
-    height: var(--t-height);
-    display: flex;
-    align-items: center;
-    gap: var(--t-gap);
     border: 1px solid #ddd;
-    
+    padding: 2.4rem 1.2rem;
+    height: var(--t-scroll-height);
+    overflow: hidden;
+    display: flex;
+    gap: var(--t-scroll-item-gap);
   }
+
   &__inner {
     display: flex;
-    flex-shrink: 0;
-    min-width: 100%;
     justify-content: space-between;
     align-items: center;
-    gap: var(--t-gap);
-    animation-name: scrollLeft;
-    animation-duration: 30s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    gap: var(--t-scroll-item-gap);
+    height: 100%;
+    animation: scrollToLeft 10s linear infinite;
   }
+
   &__item {
-    width: max-content;
     display: flex;
-    gap: .8rem;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 1rem;
+    width: max-content;
     span {
       font-size: 4.2rem;
     }
+
     i {
-      font-size: 4.8rem;
+      font-size: 4.4rem;
     }
   }
-
-
-
 }
-@keyframes scrollLeft {
-  to {
-    transform: translateX(calc(-100% - var(--t-gap)));
+
+@keyframes scrollToLeft {
+  from {
+    transform: translateX(calc(-100% - var(--t-scroll-item-gap)));
   }
 }
